@@ -34,10 +34,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MATRIX_ROW_PINS { D1, D0, D4, C6, D7 }
 #define MATRIX_COL_PINS { F4, F5, F6, F7, B1, B3, B2, E6 }
 #define UNUSED_PINS
-#define DIODE_DIRECTION COL2ROW
-#define NUMBER_OF_ENCODERS 1
-#define ENCODERS_PAD_A { B4 }
-#define ENCODERS_PAD_B { B5 }
+
+#define ENCODERS_PAD_A { D7 }
+#define ENCODERS_PAD_B { E6 }
+#define ENCODER_RESOLUTION 3
 
 /* Set 0 if debouncing isn't needed */
 #define DEBOUNCE 5
@@ -51,17 +51,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGB_DI_PIN D3
 
 #ifndef RGBLED_NUM
-  #define RGBLED_NUM 76
+#define RGBLED_NUM 76
 #endif
 
 #define RGBLIGHT_ANIMATIONS
 
 #ifndef IOS_DEVICE_ENABLE
-  #define RGBLIGHT_LIMIT_VAL 90
-  #define RGBLIGHT_VAL_STEP 17
+#define RGBLIGHT_LIMIT_VAL 90
+#define RGBLIGHT_VAL_STEP 17
 #else
-  #define RGBLIGHT_LIMIT_VAL 30
-  #define RGBLIGHT_VAL_STEP 4
+#define RGBLIGHT_LIMIT_VAL 30
+#define RGBLIGHT_VAL_STEP 4
 #endif
 #define RGBLIGHT_HUE_STEP 10
 #define RGBLIGHT_SAT_STEP 17
@@ -73,9 +73,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //  330  RGB 6
 //  300  RGB 32
 //  310  OLED & RGB 32
-  #define USB_MAX_POWER_CONSUMPTION 400
+#define USB_MAX_POWER_CONSUMPTION 400
 #else
   // fix iPhone and iPad power adapter issue
   // iOS device need lessthan 100
-  #define USB_MAX_POWER_CONSUMPTION 100
+#define USB_MAX_POWER_CONSUMPTION 100
 #endif
